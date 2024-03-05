@@ -1,0 +1,29 @@
+{
+  "name": "cocomo/php-starter",
+  "type": "project",
+  "require-dev": {
+    "vimeo/psalm": "^5.22",
+    "opsway/psr12-strict-coding-standard": "^1.1",
+    "squizlabs/php_codesniffer": "^3.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "Cocomo\\Starter\\": "src/"
+    }
+  },
+  "scripts": {
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf"
+  },
+  "authors": [
+    {
+      "name": "alihammad-gist",
+      "email": "syedalihammadshah@googlemail.com"
+    }
+  ],
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}
