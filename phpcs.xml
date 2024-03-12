@@ -1,46 +1,56 @@
 <?xml version="1.0"?>
 <!-- 
 Source: Laminas Skeleton Application
-https://github.com/laminas/laminas-mvc-skeleton/blob/2.4.x/phpcs.xml 
+https://github.com/laminas/laminas-mvc-skeleton/blob/2.4.x/phpcs.xml
 -->
-<ruleset name="Laminas Coding Standard">
+<ruleset
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd"
+	name="Laminas Coding Standard">
 	<description>Laminas Coding Standard</description>
 
 	<!-- display progress -->
-	<arg value="p"/>
-	<arg name="colors"/>
-	<arg name="extensions" value="php,dist,phtml"/>
+	<arg value="p" />
+	<arg name="colors" />
+	<arg name="extensions" value="php,dist,phtml" />
 
 	<!-- inherit rules from: -->
-	<rule ref="PSR12"/>
-	<rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
-	<rule ref="Generic.Formatting.SpaceAfterNot"/>
+	<rule ref="PSR12" />
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+	<rule ref="Generic.Formatting.SpaceAfterNot" />
 	<rule ref="Squiz.WhiteSpace.OperatorSpacing">
 		<properties>
-			<property name="ignoreNewlines" value="true"/>
-			</properties>
-		</rule>
+			<property name="ignoreNewlines" value="true" />
+		</properties>
+	</rule>
 	<rule ref="Squiz.WhiteSpace.SuperfluousWhitespace">
 		<properties>
-			<property name="ignoreBlankLines" value="false"/>
-			</properties>
-		</rule>
+			<property name="ignoreBlankLines" value="false" />
+		</properties>
+	</rule>
 	<rule ref="PSR1.Files.SideEffects">
 		<exclude-pattern>public/index.php</exclude-pattern>
-		</rule>
+	</rule>
 
 	<!-- view files adjustments -->
 	<rule ref="Generic.Files.LineLength">
 		<exclude-pattern>*.phtml</exclude-pattern>
-		</rule>
+	</rule>
 	<rule ref="PSR12.Files.FileHeader">
 		<exclude-pattern>config/*</exclude-pattern>
 		<exclude-pattern>public/index.php</exclude-pattern>
 		<exclude-pattern>*.phtml</exclude-pattern>
-		</rule>
+	</rule>
+
+	<!-- cocomo's edits -->
+	<rule ref="PSR2">
+		<exclude name="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine" />
+	</rule>
+	<rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie" />
 
 	<!-- Paths to check -->
 	<file>config</file>
 	<file>src</file>
 	<file>test</file>
 </ruleset>
+

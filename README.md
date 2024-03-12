@@ -2,8 +2,7 @@
 
 A starting point with a lot of repetitive tasks already configured
 
-1. PHP Codesniffer with Strict PSR-12 Standard
-   [opsway/psr12-strict-modern-standard](https://github.com/opsway/psr12-strict-modern-standart)
+1. PHP Codesniffer (using Laminas Coding Standard)
 2. Psalm
 3. PHPUnit
 
@@ -20,3 +19,9 @@ Similarly unused packages can be identified by
 [composer-unused/composer-unused](https://github.com/composer-unused/composer-unused)
 package. Again this should be installed locally, the package author
 recommends downloading a `phar` release from github's release page.
+
+## Using Phive to install linting and formatting binaries
+
+The project include `.phive/phars.xml` file which lists all the
+dependences for formatting and linting. Running `phive install`
+will installs the phars in `tools/` directory.
